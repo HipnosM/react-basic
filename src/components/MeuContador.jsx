@@ -6,25 +6,6 @@ export default function MeuContador(props) {
     function aumentar() {
         setContador(contador + 1);
     };
-    function diminuir() {
-        setContador(contador - 1);
-    };
-
-    if (contador >= 10) {
-        return (
-            <div className="eventos">
-                <h3>{props.section_subtitle}</h3>
-                <p>{props.description}</p>
-
-                <h3>{contador}</h3>
-                <h3>Valor muito alto!</h3>
-                <div className="botoes">
-                    <button onClick={diminuir}>Diminuir</button>
-                    <button onClick={() => setContador(0)}>Limpar</button>
-                </div>
-            </div>
-        );
-    };
 
     return (
         <div className="eventos">
@@ -32,10 +13,9 @@ export default function MeuContador(props) {
             <h3>{props.section_subtitle}</h3>
             <p>{props.description}</p>
 
-            <h3>{contador}</h3>
+            <h3>{contador > 1 ? contador + ' Cliques' : contador + ' Clique'}</h3>
             <div className="botoes">
-                <button onClick={aumentar}>Aumentar</button>
-                <button onClick={diminuir}>Diminuir</button>
+                <button onClick={aumentar}>Click</button>
                 <button onClick={() => setContador(0)}>Limpar</button>
             </div>
         </div>
