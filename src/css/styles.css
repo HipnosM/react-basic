@@ -118,6 +118,9 @@ section {
 }
 
 @media screen and (max-width: 860px) {
+    .container-header :is(h1, p) {
+        text-align: center;
+    }
     section {
         display: flex;
         flex-direction: column;
