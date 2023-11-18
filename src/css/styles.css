@@ -111,8 +111,8 @@ section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    width: 75%;
-    margin: 2rem 0;
+    width:calc(100% - 10rem);
+    margin: 2rem;
     gap: 1rem 5rem;
     font-size: 1.2rem;
 }
@@ -124,5 +124,16 @@ section {
     section {
         display: flex;
         flex-direction: column;
+    }
+}
+@media (max-width: 460px) {
+    .tarefas ol {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    :root {
+        text-align: center;
+    }
+    main {
+        margin: 0 auto;
     }
 }
