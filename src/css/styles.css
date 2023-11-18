@@ -18,7 +18,7 @@ body {
 
 main {
     align-items: center;
-    width: 85rem;
+    max-width: 85rem;
     margin: 5rem auto;
     border: var(--border);
     border-radius: 1.2rem;
@@ -115,4 +115,11 @@ section {
     margin: 2rem 0;
     gap: 1rem 5rem;
     font-size: 1.2rem;
+}
+
+@media screen and (max-width: 860px) {
+    section {
+        display: flex;
+        flex-direction: column;
+    }
 }
