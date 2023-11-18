@@ -118,7 +118,7 @@ section {
     font-size: 1.2rem;
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 768px) {
     .container-header :is(h1, p) {
         text-align: center;
     }
