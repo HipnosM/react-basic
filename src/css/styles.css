@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+:root {
+    font-size: 62.5%;
+    --border: 0.1rem solid rgba(0, 0, 0, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightcyan;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    align-items: center;
+    width: 85rem;
+    margin: 5rem auto;
+    border: var(--border);
+    border-radius: 1.2rem;
+}
+
+.container-header {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    font-size: 2.4rem;
+    color: #61DBFB;
+    background-color: #0E184D;
+}
+
+section {
+    display: grid;
+    grid-template-areas:
+        " . . . . . . . "
+        " . . contador . lista . . "
+        " . . contador . lista . . "
+        " . . contador . lista . . "
+        ". . . . . . . "
+    ;
+}
+
+.events_section {
+    grid-area: contador;
+}
+
+.list_section {
+    grid-area: lista;
+}
+
+.eventos,
+.container_list,
+.tarefas {
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: #204953;
+    font-size: 1.6rem;
+    margin: 3rem 0;
+}
+
+.botoes {
+    display: flex;
+    gap: 1rem;
+}
+
+.botoes button {
+    padding: 0.5rem 1.4rem;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: #204953;
+    color: #61DBFB;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.botoes button:hover {
+    /* transform: scale(1.05); */
+    color: #204953;
+    background-color: #0E184D;
+}
+
+.container_list :is(h4, a) {
+    color: #0E184D;
+}
+
+.container_list .search_box {
+    border: none;
+    border-radius: 0.4rem;
+    background-color: #999;
+    padding: 0.5rem 0.8rem;
+}
+
+.tarefas {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.tarefas ol {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    width: 75%;
+    margin: 2rem 0;
+    gap: 1rem 5rem;
+    font-size: 1.2rem;
+}
